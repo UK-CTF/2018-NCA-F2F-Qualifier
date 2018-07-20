@@ -18,4 +18,5 @@ select the correct choice based off the information gathering stage.
 ## Prerequisites
 
 A basic understanding of computer forensics is required, and the familiarity of related forensic tools are needed to extract information.
+For this write-up, we will be using the following tools:
 
