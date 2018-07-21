@@ -34,7 +34,7 @@ A facebook account will also be needed when looking at the suspect's social medi
 
 Firstly, we are given Op_CyberStrike.E01 to download, MD5 hash is then confirmed so we can start loading the file into FTK Imager and examine the contents. The imaged drive appears to be a USB pen-drive or similar removable media, and has NTFS file allocation. The highest level in folder hierarcy shows [orphan], [unallocated space] (two common system folders found within NTFS structures) and **[root]**, where typically data will be stored.
 
-## Examining [root] folder
+## Examining the _[root]_ folder
 
 
 Initially we can see **[root]** containing the system folder $extend (which we can ignore) and many system files beginning with the '$' prefix. These files are currently non-pertinent.
@@ -79,14 +79,78 @@ We'll log any metadata relating to these image files, such as the Date Created p
 **Date created:** 09/07/2005 10:12:55\
 **Notes:** Text file contains a series of strings on multiple lines, including a set of strings below the 'HIDDEN_PASSWORD' header. This may come in useful later.
 
-## Examining **Homework** folder
+## Examining the _Homework_ folder
 
 
 Highest level of this folder contains 2 files; a image file named **NCA-logo.jpg**, and a compressed file named **Sample Menu.7z**. Also within this folder is a subfolder named **Maths**.
 
 ### NCA-logo.jpg Analysis
 
+**Date created:** 21/01/2000 20:11:51\
+**Notes:** Image file shows the logo of the UK National Crime Agency (NCA).
+
 ### Sample Menu.7z Analysis
+
+This zip file contains a text document named **Very important stuff.txt**. However to unzip the file we require a password. On first attempt, using the string '!3aFC@7' worked, gathered from the file **Img_2017212.jpg**. The document **Very important stuff.txt** contains information about a bank account and safe deposit box located in Switzerland:
+
+_546839-2874 SC: 576999\
+Bank of Switzerland, Bern_
+
+_320111287469-a\
+Bank of Switzerland, Bern\
+Safe deposit box 1981-01c_
+
+### Customers.png Analysis
+
+Opening this file as an image gives an error, so firstly we can examine the metadata to identify what type of file header **Customers.png** has. Examining the file using HxD, we can see that the header is of an SQLite database file. Therefore, we can simply rename the file type to '.sqlite3' and open with a database viewer (DB-Browser is used here). We are shown a table 'Stuff' which contains the columns 'Name', 'Tool' and 'Price'. The contents of the table shows the following:
+
+Name | Tool | Price
+--- | --- | ---
+Paul | Stresser | 3000
+Mick | RAT | 1000
+Leanne | RAT | 750
+Shoggzy | Rootkit | 335
+Lynne | RDP_Backdoor | 3250
+
+## Examining the _Pictures_ folder
+
+This is the largest folder of the event so far. Due to the amount of images contained, we will log each and note down Date Creation data. Data for this will be left out of the write-up, however may be important for the quiz. Other files to note are another compressed file **Dog.7z**, and a document named **Instructions.docx**. Another file of interest is the image **Bare_Money.jpeg**.
+
+### Dog.7z Analysis
+
+This compressed file contains 12 jpg files, however once again requires a password. We will come back to this file once we feel we can attempt to solve the password.
+
+### Instructions.docx Analysis
+
+When opened, this document appears to have no text. However, when highlighting the document we can see that string 'Bring these in the case. Don't be late.' is found. An image contained can also be resized, showing a table with an assault rifle, two pistols and accompanying ammo.
+
+### Bare_Money.jpeg Analysis
+
+The image appears to be a stock image of a bitcoin, however when examined in FTK we can see the file has an alternative data stream pointing to a file named BTC. When opened in a text editor, BTC contains the string '1PZ5ebvdt43dvRRgRNgBhsq2PwAkN4X6W'. Since this looks like a BTC wallet address, we can search for this string in Bitcoin.info. From this, we find that the bitcoin address is for RNLI donations.
+
+## Examining the _Project_ folder
+
+This folder contains two files, **Mummy.jpg** and **Mummy.contact**. The image file will be logged, and we will examine further the contact file.
+
+### Mummy.contact Analysis
+
+When opened, this file contains the details of a contact:
+
+**Nickname:** My Best Mummy\
+**Given name:** Mummy\
+**Phone number:** 555-2568\
+**URL:** https://www.facebook.com/gary.kettlethorne.7
+
+We can now use our open source intelligence to see if any meaningful information can be extracted. To note, when examining the **World Pictures** folder, it contains a dead shortcut link to a TOR browser application.
+
+## Examining OSI
+
+
+
+
+
+
+
 
 
 
