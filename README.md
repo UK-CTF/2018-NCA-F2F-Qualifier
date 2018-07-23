@@ -151,7 +151,7 @@ We also find a mobile number posted by Gary (078912345678), and also find out th
 
 # Conclusion
 
-The quiz overall was quite tame in difficulty. Basic questions about NCA documentation and ACPO guidelines were given, as well as questions about metadata and hidden information found within the files. Overall the event was quite enjoyable, however some things could have been changed/included such as editing file headers (instead of simply changing the extension of the sqlite3 file). It would have also been nice to see some registry analysis instead of trawling solely through file metadata, however a USB pendrive's E01 size may be considerably smaller than a hard drive so we can see why CSC/NCA decided to go with this type of media. That being said it was a well assembled event and are looking forward to seeing other attendees in August!
+The quiz overall was quite tame in difficulty. Basic questions about NCA documentation and ACPO guidelines were given, as well as questions about metadata and hidden information found within the files. Overall the event was quite enjoyable, however some things could have been changed/included such as editing file headers (instead of simply changing the extension of the sqlite3 file). It would have also been nice to see some registry analysis instead of trawling solely through file metadata, however a USB pendrive's E01 size may be considerably smaller than a hard drive so we can see why CSC/NCA decided to go with this type of media. That being said it was a well constructed event and are looking forward to seeing other attendees in August!
 
 **– sYNC**
 
