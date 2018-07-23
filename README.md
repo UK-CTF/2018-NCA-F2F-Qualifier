@@ -102,7 +102,10 @@ Safe deposit box 1981-01c_
 
 ### Customers.png Analysis
 
-Opening this file as an image gives an error, so firstly we can examine the metadata to identify what type of file header **Customers.png** has. Examining the file using HxD, we can see that the header is of an SQLite database file. Therefore, we can simply rename the file type to '.sqlite3' and open with a database viewer (DB-Browser is used here). We are shown a table 'Stuff' which contains the columns 'Name', 'Tool' and 'Price'. The contents of the table shows the following:
+Opening this file as an image gives an error, so firstly we can examine the metadata to identify what type of file header **Customers.png** has. Examining the file using HxD, we can see that the header is of an SQLite database file.\
+``` 53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00 ```\
+
+Therefore, we can simply rename the file type to '.sqlite3' and open with a database viewer (DB-Browser is used here). We are shown a table 'Stuff' which contains the columns 'Name', 'Tool' and 'Price'. The contents of the table shows the following:
 
 Name | Tool | Price
 --- | --- | ---
@@ -155,7 +158,7 @@ The quiz overall was quite tame in difficulty. Basic questions about NCA documen
 
 **– sYNC**
 
-**Difficulty:** 2/10\
+**Difficulty:** 2/10
 
 
 
