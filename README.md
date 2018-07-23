@@ -155,7 +155,7 @@ The quiz overall was quite tame in difficulty. Basic questions about NCA documen
 
 **– sYNC**
 
-**Dificulty:** 3/10\
+**Difficulty:** 3/10\
 **Enjoyability:** 6/10
 
 
