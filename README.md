@@ -1,5 +1,6 @@
 # 2018 NCA F2F Quals "Operation Cyberstrike" | Write-up
 **by sYNC @ UK-CTF** | UK-based CTF community
+
 **Published:** 23 August 2018
 
 **Website:**  [uk-ctf.org](http://uk-ctf.org)\
