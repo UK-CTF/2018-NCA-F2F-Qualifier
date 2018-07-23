@@ -32,10 +32,9 @@ A facebook account will also be needed when looking at the suspect's social medi
 
 # Task
 
-Firstly, we are given Op_CyberStrike.E01 to download, MD5 hash is then confirmed so we can start loading the file into FTK Imager and examine the contents. The imaged drive appears to be a USB pen-drive or similar removable media, and has NTFS file allocation. The highest level in folder hierarcy shows [orphan], [unallocated space] (two common system folders found within NTFS structures) and **[root]**, where typically data will be stored.
+Firstly, we are given Op_CyberStrike.E01 to download, the MD5 hash is then confirmed so we can start loading the file into FTK Imager and examine the contents. The imaged drive appears to be a USB pen-drive or similar removable media, and has NTFS file allocation. The highest level in folder hierarchy shows [orphan], [unallocated space] (two common system folders found within NTFS structures) and **[root]**, where user data will be typically stored.
 
 ## Examining the _[root]_ folder
-
 
 Initially we can see **[root]** containing the system folder $extend (which we can ignore) and many system files beginning with the '$' prefix. These files are currently non-pertinent.
 
