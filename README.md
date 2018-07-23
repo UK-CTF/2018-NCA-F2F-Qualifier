@@ -102,7 +102,7 @@ Safe deposit box 1981-01c_
 
 ### Customers.png Analysis
 
-Opening this file as an image gives an error, so firstly we can examine the metadata to identify what type of file header **Customers.png** has. Examining the file using HxD, we can see that the header is of an SQLite database file.\
+Opening this file as an image gives an error, so firstly we can examine the metadata to identify what type of file header **Customers.png** has. Examining the file using HxD, we can see that the header is of an SQLite database file:
 
 ``` 53 51 4C 69 74 65 20 66 6F 72 6D 61 74 20 33 00 ```
 
